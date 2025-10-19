@@ -1,0 +1,36 @@
+SELECT DISTINCT CITY
+FROM STATION
+WHERE (CITY LIKE 'A%' 
+    OR CITY LIKE 'E%' 
+    OR CITY LIKE 'I%' 
+    OR CITY LIKE 'O%' 
+    OR CITY LIKE 'U%')
+  AND (CITY LIKE '%A' 
+    OR CITY LIKE '%E' 
+    OR CITY LIKE '%I' 
+    OR CITY LIKE '%O' 
+    OR CITY LIKE '%U');
+
+/* THEORY */
+
+Alternative Approach Using RegEx
+
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY REGEXP '^[AEIOUaeiou].*[AEIOUaeiou]$';
+
+Alternative Approach For Case Insensitive
+
+SELECT DISTINCT CITY
+FROM STATION
+WHERE (UPPER(CITY) LIKE 'A%' 
+    OR UPPER(CITY) LIKE 'E%' 
+    OR UPPER(CITY) LIKE 'I%' 
+    OR UPPER(CITY) LIKE 'O%' 
+    OR UPPER(CITY) LIKE 'U%')
+  AND (UPPER(CITY) LIKE '%A' 
+    OR UPPER(CITY) LIKE '%E' 
+    OR UPPER(CITY) LIKE '%I' 
+    OR UPPER(CITY) LIKE '%O' 
+    OR UPPER(CITY) LIKE '%U');
+    

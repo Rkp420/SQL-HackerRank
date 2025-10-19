@@ -1,0 +1,11 @@
+Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION. Your result cannot contain duplicates.
+Input Format
+The STATION table is described as follows:
+
+// https://www.hackerrank.com/challenges/weather-observation-station-7/problem?isFullScreen=true
+
+The % wildcard in SQL:
+	•	A% → starts with A
+	•	%A → ends with A
+	•	%A% → contains A anywhere
+
